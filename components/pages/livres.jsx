@@ -25,10 +25,7 @@ export default function Livres({ livres, setLivres }) {
     setShowForm(false);
   }
 
-  function handleDelete(id) {
-    if (confirm('🗑️ Voulez-vous vraiment supprimer ce livre ?')) {
-      setLivres(livres.filter((l) => l.id !== id));
-    }
+ 
   }
 
   function handleToggleDisponibilite(id) {
