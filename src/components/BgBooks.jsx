@@ -31,3 +31,13 @@ function generateShelf() {
   }
   return rows;
 }
+
+export default function BgBooks({ withShelf = true }) {
+  const shelfRows = useMemo(() => generateShelf(), []);
+
+  return (
+    <div
+      className="fixed inset-0 z-0 overflow-hidden pointer-events-none
+                 bg-gradient-to-br from-stone-100 via-stone-200 to-stone-300
+                 dark:from-stone-900 dark:via-stone-800 dark:to-stone-900"
+    >
