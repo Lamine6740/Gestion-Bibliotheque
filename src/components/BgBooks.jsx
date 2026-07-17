@@ -14,3 +14,20 @@ const FLOATING_POSITIONS = [
   { top: '70%', left: '20%', delay: '15s', rotation: '-5deg' },
   { top: '15%', left: '75%', delay: '2s', rotation: '20deg' },
   { top: '45%', left: '85%', delay: '8s', rotation: '-12deg' },
+];
+
+function generateShelf() {
+  const rows = [];
+  for (let row = 0; row < 3; row++) {
+    const books = [];
+    for (let i = 0; i < 20; i++) {
+      books.push({
+        height: HEIGHTS[Math.floor(Math.random() * HEIGHTS.length)],
+        color: COLORS[Math.floor(Math.random() * COLORS.length)],
+        width: 6 + Math.random() * 6,
+      });
+    }
+    rows.push(books);
+  }
+  return rows;
+}
