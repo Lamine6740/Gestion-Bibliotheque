@@ -65,3 +65,19 @@ export default function BgBooks({ withShelf = true }) {
 
       {withShelf && (
         <div className="absolute bottom-0 inset-x-0 h-3/5 flex items-end justify-around px-[5%] opacity-[0.15] dark:opacity-30">
+          {shelfRows.map((books, rowIdx) => (
+            <div className="flex gap-1 items-end h-full pb-5" key={rowIdx}>
+              {books.map((b, i) => (
+                <div
+                  key={i}
+                  className="rounded-t-sm shadow-[-1px_0_3px_rgba(0,0,0,0.1)]"
+                  style={{ height: `${b.height}%`, background: b.color, width: `${b.width}px` }}
+                />
+              ))}
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
