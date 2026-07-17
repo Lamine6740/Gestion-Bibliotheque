@@ -41,3 +41,24 @@ export default function BgBooks({ withShelf = true }) {
                  bg-gradient-to-br from-stone-100 via-stone-200 to-stone-300
                  dark:from-stone-900 dark:via-stone-800 dark:to-stone-900"
     >
+      <div className="absolute inset-0">
+        {EMOJIS.map((emoji, i) => {
+          const pos = FLOATING_POSITIONS[i];
+          return (
+            <div
+              key={i}
+              className="absolute text-3xl opacity-[0.06] dark:opacity-[0.08] animate-floatBook"
+              style={{
+                top: pos.top,
+                left: pos.left,
+                right: pos.right,
+                animationDelay: pos.delay,
+                transform: `rotate(${pos.rotation})`,
+                '--rotation': pos.rotation,
+              }}
+            >
+              {emoji}
+            </div>
+          );
+        })}
+      </div>
