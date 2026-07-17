@@ -37,7 +37,7 @@ export default function Navbar({ currentPage, onNavigate, darkMode, onToggleThem
             className="w-10 h-10 flex items-center justify-center rounded-xl bg-stone-100 dark:bg-stone-700 text-stone-600 dark:text-stone-200 hover:bg-stone-200 dark:hover:bg-stone-600 hover:rotate-[20deg] transition-all duration-300"
             onClick={onToggleTheme}
           >
-            
+            <i className={`fas ${darkMode ? 'fa-sun' : 'fa-moon'}`}></i>
           </button>
           <button className="btn-danger" onClick={onLogout}>
             <i className="fas fa-sign-out-alt"></i> <span className="hidden sm:inline">Déconnexion</span>
