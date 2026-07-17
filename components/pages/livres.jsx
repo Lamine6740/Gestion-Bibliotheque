@@ -8,7 +8,12 @@ export default function Livres({ livres, setLivres }) {
   const [categorie, setCategorie] = useState('');
   const [disponible, setDisponible] = useState(true);
 
- 
+  const filtered = livres.filter(
+    (l) =>
+      l.titre.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      l.auteur.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   function handleAdd(e) {
     e.preventDefault();
     if (!titre || !auteur) return;
