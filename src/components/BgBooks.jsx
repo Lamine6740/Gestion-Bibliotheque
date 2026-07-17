@@ -62,3 +62,6 @@ export default function BgBooks({ withShelf = true }) {
           );
         })}
       </div>
+
+      {withShelf && (
+        <div className="absolute bottom-0 inset-x-0 h-3/5 flex items-end justify-around px-[5%] opacity-[0.15] dark:opacity-30">
