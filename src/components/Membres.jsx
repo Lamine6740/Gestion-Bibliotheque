@@ -80,15 +80,3 @@ export default function Membres({ membres, setMembres }) {
               <p className="text-sm text-stone-500"><i className="fas fa-envelope"></i> {m.email}</p>
               <button className="btn-danger btn-sm mt-2" onClick={() => handleDelete(m.id)}>
                 <i className="fas fa-trash"></i> Supprimer
-              </button>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {filtered.length === 0 && (
-        <p className="text-center py-8 text-stone-500">👤 Aucun membre trouvé</p>
-      )}
-    </div>
-  );
-}
